@@ -51,13 +51,17 @@ h1 {
     margin-bottom: 1rem;
 }
 
-.buttons-grid div {
+.buttons-grid .btn {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     color: var(--white);
     font-size: 2rem;
+}
+
+.btn:active {
+    background-color:rgb(34, 34, 34)
 }
 
 .top {

@@ -1,3 +1,18 @@
+const buttons = document.querySelectorAll('.btn');
+const display = document.querySelector('.screen');
+
+//flags for calculator operators
+let isPositive = true;
+let isDivide = false;
+let isTimes = false;
+let isMinus = false;
+let isPlus = false;
+let isCalculating = false;
+
+//initial value
+let value = 0;
+display.textContent = value;
+
 //Calculator functions
 const plus = (x, y) => {
     return x + y;
@@ -26,3 +41,39 @@ function limit(num) {
     const decimalLength = limit - integerLength - 1;
     return Math.round(num * Math.pow(10, decimalLength)) / Math.pow(10, decimalLength);
 }
+
+//event handlers
+function handleTopBtn() {
+    return;
+};
+
+function handleNum(e) {
+    let btnValue = e.getAttribute('value');
+    display.textContent = btnValue;
+}
+
+function handleOperator() {
+    return;
+}
+
+function handleClick(e) {
+    console.log(e.target);
+    if (e.target.classList.contains('top')) {
+        handleTopBtn();
+    }
+    if (e.target.classList.contains('num')) {
+        handleNum(e.target);
+    }
+    else {
+        handleOperator();
+    }
+}
+
+function handleKeyPress(e) {
+    return;
+}
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', handleClick);
+    btn.addEventListener('keydown', handleKeyPress);
+});
