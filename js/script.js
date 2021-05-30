@@ -10,6 +10,7 @@ let isPlus = false;
 let isCalculating = false;
 
 //initial value
+let displayValue = '';
 let value = 0;
 display.textContent = value;
 
@@ -49,7 +50,8 @@ function handleTopBtn() {
 
 function handleNum(e) {
     let btnValue = e.getAttribute('value');
-    display.textContent = btnValue;
+    displayValue += btnValue;
+    display.textContent = displayValue;
 }
 
 function handleOperator() {
