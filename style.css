@@ -1,0 +1,78 @@
+:root {
+    --white: rgb(243, 243, 243);
+    --red: rgb(172, 41, 41);
+    --grey: rgb(122, 121, 121);
+    --black: rgb(34, 34, 34);
+    --orange: rgb(216, 130, 17);
+    --blue: rgb(34, 122, 236);
+    --green: rgba(179, 253, 179, 0.466);
+}
+
+body {
+    background-color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.calculator-box {
+    background: var(--black);
+    width: 23rem;
+    height: 30rem;
+    margin: 2rem auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen {
+    width: 90%;
+    height: 20%;
+    background: var(--green);
+    margin: 1rem auto;
+    font-size: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.buttons-grid {
+    width: 90%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.buttons-grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.top {
+    background-color: var(--blue);
+}
+
+.operator {
+    background-color: var(--orange);
+}
+
+.num,
+.decimal {
+    background-color: var(--grey);
+}
+
+.num[value="0"] {
+    grid-column: 1 / 3;
+}
