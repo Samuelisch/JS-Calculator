@@ -21,8 +21,8 @@ h1 {
 
 .calculator-box {
     background: var(--black);
-    width: 23rem;
-    height: 30rem;
+    width: 25rem;
+    height: 32rem;
     margin: 2rem auto;
     z-index: 1;
     display: flex;
@@ -53,11 +53,17 @@ h1 {
 
 .buttons-grid .btn {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     color: var(--white);
     font-size: 2rem;
+}
+
+.btn div {
+    height: .1rem;
+    font-size: .6rem;
 }
 
 .btn:active {
